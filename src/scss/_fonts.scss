@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../assets/fonts/helvetica_bold.otf") format("opentype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../../assets/fonts/helvetica_regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+}

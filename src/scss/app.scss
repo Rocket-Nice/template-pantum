@@ -1,0 +1,219 @@
+@import "./reset.scss";
+@import "./fonts.scss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+// components
+@import "./components/header.scss";
+
+@import "./components/footer.scss";
+
+@import "./components/mainBanner.scss";
+
+@import "./components/subscribeForm";
+
+@import "./components/inFuncBox.scss";
+
+@import "./components/inServiceBox.scss";
+
+@import "./components/news.scss";
+
+@import "./components/products";
+
+@import "./components/service-policy";
+
+@import "./components/service";
+
+@import "./components/headquarters";
+
+@import "./components/suggest";
+
+@import "./components/floatBox";
+
+@import "./components/about";
+
+@import "./components/date";
+
+@import "./components/forward";
+
+@import "./components/qualify";
+
+@import "./components/achievement";
+
+@import "./components/breadcrumbs";
+
+@import "./components/menuBox";
+
+@import "./components/history";
+
+@import "./components/map";
+
+@import "./components/authentication";
+
+@import "./components/about-news-slider";
+
+@import "./components/newsboard";
+
+@import "./components/news-pagination";
+
+@import "./components/news-page";
+
+@import "./components/privacy-policy";
+
+@import "./components/videoLibr";
+
+@import "./components/videoSearch";
+
+@import "./components/sidebar";
+
+@import "./components/consumables";
+
+@import "./components/check-banner";
+
+@import "./components/device-card";
+
+@import "./components/device-info";
+
+@import "./components/products-center";
+
+@import "./components/download";
+
+@import "./components/service-center";
+
+@import "./components/error-page";
+
+@import "./components/site-search";
+
+@import "./components/loader";
+
+// elements
+html {
+	scroll-behavior: smooth;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100lvh;
+}
+
+h2,
+h1 {
+	font-weight: 400;
+}
+
+.main-content {
+	flex-grow: 1;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	flex-shrink: 0;
+}
+
+a {
+	color: unset;
+	text-decoration: none;
+}
+
+input {
+	-webkit-border-radius: 0;
+	-webkit-appearance: none;
+	border: none;
+	background: none;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	vertical-align: top;
+}
+
+[data-place] {
+	cursor: pointer;
+}
+
+.swiper-pagination {
+	bottom: 5% !important;
+}
+
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background: #fff;
+	border-radius: 100%;
+	margin: 0 8px !important;
+	opacity: 1;
+	vertical-align: middle;
+	position: relative;
+
+	@media (max-width: 920px) {
+		.swiper-pagination-bullet {
+			width: 6px;
+			height: 6px;
+			margin: 0 4px !important;
+		}
+	}
+
+	&::after {
+		width: 16px;
+		height: 16px;
+		border: 4px solid #e00000;
+		border-radius: 100%;
+		content: "";
+		position: absolute;
+		left: -2px;
+		top: -2px;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+
+		@media (max-width: 920px) {
+			width: 14px;
+			height: 14px;
+			display: none;
+		}
+	}
+}
+
+.swiper-pagination-bullet-active {
+	background: none !important;
+
+	&:after {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	@media (max-width: 920px) {
+		background: #d2232a !important;
+	}
+}
+
+.main_wrap {
+	padding: 80px 0 120px;
+	background: #f9f9f9;
+
+	@media (max-width: 1200px) {
+		padding: 45px 0 80px;
+	}
+
+	@media (max-width: 920px) {
+		padding: 30px 0 50px;
+	}
+
+	@media (max-width: 540px) {
+		padding: 25px 0;
+	}
+}
+
+// old styles
+@import "./components/oldStyles";
+
+.grey {
+	color: #333333;
+}

@@ -1,0 +1,151 @@
+.qualify {
+  padding: 0 14px 30px;
+  border-bottom: 1px solid #e0e0e0;
+
+  @media (min-width: 641px) {
+    margin-top: 50px;
+    padding: 0 20px 75px;
+  }
+
+  @media (min-width: 1101px) {
+    margin-top: 75px;
+  }
+
+  @media (min-width: 1201px) {
+    margin: 75px 60px 0 60px !important;
+    padding: 0 0 75px 0 !important;
+  }
+  @media (min-width: 1441px) {
+    margin: 75px auto 0 !important;
+  }
+  //important для переопределения стилей из app
+}
+
+.qualify-slider {
+  position: relative;
+  overflow: hidden;
+
+  .swiper-pagination-bullets {
+    text-align: center;
+
+    padding-top: 50px;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #e0e0e1;
+  }
+}
+
+.qualify-slide {
+  cursor: pointer;
+
+  &:hover {
+    .qualify-slide__img-mask {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  &__img-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(131, 131, 131, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 65px;
+      height: 65px;
+      border-radius: 100%;
+      background: #fff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 22px;
+      height: 22px;
+      background: url("../../assets/img/search.png") no-repeat center;
+    }
+  }
+
+  &__nomination {
+    text-align: center;
+    line-height: 21px;
+
+    @media (min-width: 501px) {
+      line-height: 24px;
+    }
+
+    @media (min-width: 1101px) {
+      line-height: 27px;
+    }
+  }
+}
+
+.fancybox__backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.is-right .f-button {
+  top: 6px;
+  right: 6px;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: #111;
+    transition: background-color 0.2s ease;
+  }
+}
+
+.fancybox__infobar {
+  display: none;
+}
+
+.is-prev,
+.is-next {
+  width: 43px;
+  height: 58px;
+  opacity: 0.5;
+  border-radius: 4px;
+  background-color: #222 !important;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  svg {
+    width: 40px;
+    height: 55px;
+  }
+  &:hover {
+    opacity: 1;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+  }
+}

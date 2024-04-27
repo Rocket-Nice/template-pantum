@@ -1,0 +1,14 @@
+.products-center {
+  .product-card {
+    padding-bottom: 120px;
+  }
+  .product-card__link {
+    @media (min-width: 541px) {
+      height: 285px;
+    }
+
+    @media (min-width: 1441px) {
+      height: 380px;
+    }
+  }
+}

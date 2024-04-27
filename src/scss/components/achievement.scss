@@ -1,0 +1,180 @@
+.achievement {
+  background: url("../../assets/img/achievement-bg.jpg") no-repeat center;
+  background-color: #f9f9f9;
+  background-size: cover;
+  padding: 30px 0 50px;
+
+  @media (min-width: 921px) {
+    padding: 75px 0 165px;
+  }
+
+  &__wrapper {
+    @media ((min-width: 1201px) and (max-width: 1440px)) {
+      margin: 0 60px !important;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    color: #333333;
+    line-height: 19px;
+    font-weight: 700;
+    padding-bottom: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 50px;
+      height: 3px;
+      background-color: #d2232a;
+
+      @media (min-width: 541px) {
+        height: 5px;
+      }
+    }
+
+    @media (min-width: 541px) {
+      line-height: 29px;
+      padding-bottom: 20px;
+    }
+
+    @media (min-width: 1441px) {
+      line-height: 50px;
+    }
+  }
+
+  &__subtitle {
+    line-height: 21px;
+    @media (min-width: 501px) {
+      line-height: 24px;
+    }
+
+    @media (min-width: 801px) {
+      line-height: 27px;
+    }
+
+    @media (min-width: 1441px) {
+      line-height: 33px;
+    }
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    max-height: 320px;
+    overflow-y: auto;
+    line-height: 25px;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 4px;
+      background-color: #d2232a;
+      height: 60px;
+      -webkit-border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      -webkit-border-radius: 0;
+    }
+
+    @media (min-width: 541px) {
+      line-height: 29px;
+    }
+
+    @media (min-width: 921px) {
+      padding-right: 50px;
+      width: 80%;
+    }
+
+    @media (min-width: 1201px) {
+      width: 55%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    &:not(:last-child) {
+      .achievement__text {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 7px;
+          left: 10.5px;
+          bottom: -33px;
+          width: 1px;
+
+          background-color: #999;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &:hover {
+      .achievement__year {
+        background-color: #d2232a;
+        color: #fff;
+        border: 1px solid #d2232a;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &__year {
+    position: relative;
+    height: 33px;
+    padding: 0 22px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 40px;
+    line-height: 21px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 7px;
+      z-index: 2;
+
+      width: 22px;
+      height: 22px;
+
+      border: 7px solid #fff;
+
+      border-radius: 100%;
+      background: #d2232a;
+    }
+
+    @media (min-width: 501px) {
+      line-height: 24px;
+    }
+
+    @media (min-width: 1101px) {
+      line-height: 27px;
+    }
+  }
+}

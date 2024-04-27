@@ -1,0 +1,158 @@
+.inbanner > img {
+  width: 100%;
+}
+
+.inbanner {
+  .ban_txt {
+    width: 100%;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 10;
+
+    @media (max-width: 640px) {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      top: 26%;
+    }
+  }
+
+  #content {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    z-index: -1;
+  }
+
+  @media (max-width: 640px) {
+    height: 245px;
+    overflow: hidden;
+  }
+
+  img {
+    @media (max-width: 640px) {
+      max-width: none;
+      max-height: 200px;
+      width: auto;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+  }
+
+  &__black {
+    .crumbs a,
+    .breadcrumbs span {
+      color: #64656a !important;
+    }
+
+    .ban_txt {
+      h1 {
+        color: #333;
+      }
+
+      .subtitle {
+        color: #64656a;
+      }
+    }
+
+    a {
+      background-image: url(../../assets/img/arr5.png) !important;
+    }
+  }
+}
+
+.single-product {
+  .inbanner {
+    @media (max-width: 640px) {
+      height: max-content;
+    }
+  }
+
+  .pa {
+    position: sticky;
+  }
+
+  .mt100 {
+    @media (max-width: 1200px) {
+      margin-top: 56px;
+    }
+  }
+}
+
+.crumbs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 30px 0;
+
+  @media (max-width: 1200px) {
+    padding: 15px 0;
+  }
+
+  @media (max-width: 640px) {
+    top: auto !important;
+    bottom: 0;
+    height: auto;
+    line-height: 1.8;
+    padding: 12px 0;
+    background: #f5f5f5;
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  .wrap {
+    @media (max-width: 640px) {
+      white-space: normal;
+      text-overflow: clip;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding-right: 15px;
+    background: url(../../assets/img/arr5.png) no-repeat right center;
+    margin-right: 4px;
+    color: #64656a;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: #e00000 !important;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  span {
+    color: #64656a;
+
+    @media (max-width: 640px) {
+      color: #1d3989;
+    }
+  }
+}
+
+.crumbs_white {
+  .crumbs {
+    a,
+    span {
+      color: #fff;
+
+      @media (max-width: 640px) {
+        color: #333;
+      }
+    }
+
+    a {
+      background-image: url(../../assets/img/arr11.png);
+
+      @media (max-width: 640px) {
+        background-image: url(../../assets/img/arr5.png);
+      }
+    }
+  }
+}

@@ -1,0 +1,252 @@
+.footer {
+  padding: 25px 0 70px;
+  background-color: #333333;
+
+  //FOOTER TOP
+  &__top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+      opacity: 0.5;
+
+      @media (min-width: 921px) {
+        bottom: -50px;
+      }
+    }
+
+    @media (min-width: 921px) {
+      flex-direction: row;
+
+      margin-bottom: 70px;
+    }
+  }
+
+  &__top-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    column-gap: 20px;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    width: 150px;
+    height: 17px;
+    margin-bottom: 30px;
+
+    @media (min-width: 921px) {
+      width: 220px;
+      height: 25px;
+      margin-bottom: 0;
+      margin-right: 47px;
+    }
+  }
+
+  &__logo-image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 12px;
+    width: 100%;
+
+    @media (min-width: 641px) {
+      justify-content: start;
+      max-width: 927px;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 6px;
+
+    @media (min-width: 921px) {
+      max-width: 289px;
+      width: 100%;
+      gap: 12px;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    line-height: 18px;
+    color: #999;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #d2232a;
+      transition: color 0.3s ease-in-out;
+    }
+
+    @media (min-width: 641px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__link--header {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+
+    line-height: 18px;
+    color: #fff;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 26px;
+      border-bottom: 2px solid #d2232a;
+    }
+
+    @media (min-width: 641px) {
+      font-size: 20px;
+      line-height: 30px;
+      padding-bottom: 24px;
+    }
+  }
+
+  //FOOTER BOTTOM
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #bbbbbb;
+
+    @media (min-width: 921px) {
+      font-size: 14px;
+    }
+
+    @media (min-width: 1460px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    margin-bottom: 6px;
+
+    @media (min-width: 1460) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.social {
+  display: none;
+
+  @media (min-width: 641px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+
+  &__header {
+    align-self: flex-end;
+    text-wrap: nowrap;
+    font-size: 20px;
+    color: #fff;
+
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+
+    @media (min-width: 1024px) {
+      gap: 25px;
+    }
+
+    &.mobile {
+      margin-bottom: 30px;
+
+      @media (min-width: 641px) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    border: 1px solid #999;
+    background-color: #333333;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+    &:hover {
+      border: 1px solid #d2232a;
+      background-color: #d2232a;
+
+      transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+    }
+  }
+
+  &__image {
+    width: 22px;
+    height: 22px;
+    max-width: 100%;
+  }
+}
+
+.privacy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+
+  @media (min-width: 571px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 1460px) {
+    margin-left: auto;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      border-left: 1px solid #999;
+      padding-left: 10px;
+    }
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #d2232a;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+}
